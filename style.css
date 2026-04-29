@@ -12,18 +12,24 @@ body {
   justify-content: center;
   align-items: center;
   background: #6b705c;
-  color: white;
 }
 
 .envelope {
-  width: 220px;
-  height: 140px;
-  border: 2px solid white;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   cursor: pointer;
-  transition: all 0.5s;
+}
+
+.envelope img {
+  width: 200px;
+  max-width: 80%;
+  height: auto;
+}
+
+.envelope p {
+  margin-top: 10px;
+  color: white;
 }
 
 .envelope:hover {
