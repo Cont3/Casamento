@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+  background: #f8f8f5;
+}
+
+/* ENVELOPE */
+#envelope-screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #6b705c;
+  color: white;
+}
+
+.envelope {
+  width: 220px;
+  height: 140px;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.envelope:hover {
+  background: white;
+  color: #6b705c;
+}
+
+/* LIVRO */
+#book {
+  display: none;
+  height: 100vh;
+}
+
+/* PÁGINAS */
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: white;
+  color: #3a3a3a;
+
+  text-align: center;
+  padding: 30px;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: #6b705c;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-style: italic;
+}
