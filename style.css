@@ -7,7 +7,7 @@ body {
 
 /* ENVELOPE */
 #envelope-screen {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,31 +19,31 @@ body {
   flex-direction: column;
   align-items: center;
   cursor: pointer;
-}
 
-.envelope img {
-  width: 40vw;        /* 40% da largura da tela */
-  max-width: 300px;   /* limite no desktop */
-  min-width: 150px;   /* limite no celular */
-  height: auto;
-}
-
-.envelope p {
-  margin-top: 10px;
-  color: white;
-}
-
-.envelope:hover {
-  transform: scale(1.05);
-  transition: 0.3s;
-}
-.envelope {
-  transition: 0.3s;
-}
-.envelope {
+  transition: transform 0.3s ease;
   animation: float 3s ease-in-out infinite;
 }
 
+/* TAMANHO RESPONSIVO PERFEITO */
+.envelope img {
+  width: clamp(160px, 35vw, 320px);
+  height: auto;
+  display: block;
+}
+
+/* TEXTO */
+.envelope p {
+  margin-top: 12px;
+  color: white;
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+/* HOVER BONITO (SEM FUNDO BRANCO) */
+.envelope:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+
+/* ANIMAÇÃO SUAVE */
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-8px); }
@@ -76,11 +76,11 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: clamp(28px, 5vw, 40px);
 }
 
 h2 {
-  font-size: 28px;
+  font-size: clamp(22px, 4vw, 28px);
 }
 
 .subtitle {
